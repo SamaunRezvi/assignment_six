@@ -23,12 +23,13 @@ export default function Hero() {
           <ArrowDown size={18} />
         </a>
       </div>
-      <div className="relative h-72 w-full overflow-hidden rounded-3xl sm:h-96 lg:h-[420px]">
+      <div className="relative flex h-72 w-full items-center justify-center overflow-hidden rounded-3xl border border-white/10 bg-white/5 sm:h-96 lg:h-[420px]">
+        <div className="absolute h-56 w-56 rounded-full bg-[var(--accent)]/10 blur-3xl sm:h-72 sm:w-72" />
         <Image
           src="/banner.png"
           alt="FitLog workout banner"
           fill
-          className="object-cover"
+          className="object-contain p-10"
           priority
         />
       </div>
