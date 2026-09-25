@@ -34,20 +34,25 @@ const PlanContext = createContext<PlanContextValue | undefined>(undefined);
 const PLAN_KEY = "fitlog-plan";
 const SAVED_KEY = "fitlog-saved";
 
+function readStorage(key: string): PlanItem[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
 export function PlanProvider({ children }: { children: ReactNode }) {
   const [plan, setPlan] = useState<PlanItem[]>([]);
   const [saved, setSaved] = useState<PlanItem[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    try {
-      const storedPlan = localStorage.getItem(PLAN_KEY);
-      const storedSaved = localStorage.getItem(SAVED_KEY);
-      if (storedPlan) setPlan(JSON.parse(storedPlan));
-      if (storedSaved) setSaved(JSON.parse(storedSaved));
-    } catch {
-      // ignore corrupted storage
-    }
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time hydration from localStorage after mount, required to avoid SSR/client mismatch
+    setPlan(readStorage(PLAN_KEY));
+    setSaved(readStorage(SAVED_KEY));
     setLoaded(true);
   }, []);
 
