@@ -19,7 +19,7 @@ export default function PlanWorkoutCard({
   return (
     <div className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:flex-row sm:items-center">
       <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl">
-        <Image src={workout.image} alt={workout.name} fill className="object-cover" />
+        <Image src={workout.image} alt={workout.name} fill sizes="80px" className="object-cover" />
       </div>
 
       <div className="flex-1">

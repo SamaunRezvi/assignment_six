@@ -29,6 +29,7 @@ export default function Hero() {
           src="/banner.png"
           alt="FitLog workout banner"
           fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-contain p-10"
           priority
         />
