@@ -7,13 +7,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const oswald = Oswald({
-  variable: "--font-oswald",
+  variable: "--font-display",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
