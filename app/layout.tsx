@@ -27,12 +27,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${oswald.variable} ${inter.variable} h-full antialiased`}
+      className={`${oswald.variable} ${inter.variable} h-full overflow-x-hidden antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#0b0b0c] text-white">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-[#0b0b0c] text-white">
         <PlanProvider>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="min-w-0 flex-1">{children}</main>
           <Footer />
           <Toaster
             position="bottom-center"

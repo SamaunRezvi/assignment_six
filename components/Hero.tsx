@@ -4,11 +4,11 @@ import { ArrowDown } from "lucide-react";
 export default function Hero() {
   return (
     <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-24">
-      <div>
+      <div className="min-w-0">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[var(--accent)]">
           Workout Library
         </p>
-        <h1 className="mt-4 font-display text-4xl font-bold uppercase leading-tight sm:text-5xl lg:text-6xl">
+        <h1 className="mt-4 font-display text-3xl font-bold uppercase leading-tight sm:text-5xl lg:text-6xl">
           Train with intent. Log every set.
         </h1>
         <p className="mt-6 max-w-md text-base text-white/60">
