@@ -24,6 +24,7 @@ interface PlanContextValue {
   toggleDone: (id: number) => void;
   isInPlan: (id: number) => boolean;
   isInSaved: (id: number) => boolean;
+  isPlanFull: boolean;
   loaded: boolean;
 }
 
@@ -118,6 +119,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
         toggleDone,
         isInPlan,
         isInSaved,
+        isPlanFull: plan.length >= PLAN_CAP,
         loaded,
       }}
     >
