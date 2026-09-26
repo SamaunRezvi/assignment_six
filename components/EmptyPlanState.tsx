@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function EmptyPlanState() {
   return (
-    <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#14161b] py-20 text-center">
+    <div className="flex flex-col items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#1a1d23] py-20 text-center">
       <h3 className="font-display text-lg font-bold uppercase tracking-wide">
         Nothing Here Yet
       </h3>

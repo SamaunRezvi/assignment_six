@@ -33,10 +33,8 @@ export default function MyPlanPage() {
   const calories = plan.reduce((sum, w) => sum + w.caloriesBurned, 0);
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-      <h1 className="font-display text-3xl font-bold uppercase sm:text-4xl">
-        My Plan
-      </h1>
+    <div className="mx-auto max-w-6xl px-4 py-8">
+      <h1 className="font-display text-4xl font-bold uppercase">My Plan</h1>
       <p className="mt-2 text-white/50">
         Cap of five lifts for today. Finish them, then load more.
       </p>
@@ -46,7 +44,7 @@ export default function MyPlanPage() {
       </div>
 
       <div className="mt-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        <div className="flex gap-1 rounded-full border border-white/10 bg-[#14161b] p-1">
+        <div className="flex gap-1 rounded-2xl border border-white/10 bg-[#1a1d23] p-1">
           <TabButton active={tab === "today"} onClick={() => setTab("today")}>
             Today&apos;s Plan
           </TabButton>
@@ -54,10 +52,12 @@ export default function MyPlanPage() {
             Saved
           </TabButton>
         </div>
-        <SortDropdown value={sortBy} onChange={setSortBy} />
+        <div className="w-full sm:w-auto">
+          <SortDropdown value={sortBy} onChange={setSortBy} />
+        </div>
       </div>
 
-      <div className="mt-6 space-y-4">
+      <div className="mt-8 space-y-4">
         {!loaded ? (
           <p className="py-10 text-center text-white/50">Loading workouts…</p>
         ) : sortedList.length === 0 ? (

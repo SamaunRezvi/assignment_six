@@ -20,8 +20,8 @@ export default function Library({ workouts }: { workouts: Workout[] }) {
   }, [workouts, sortBy]);
 
   return (
-    <section id="library" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+    <section id="library" className="mx-auto max-w-6xl px-4 py-8">
+      <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <div>
           <h2 className="font-display text-3xl font-bold uppercase sm:text-4xl">
             The Library
@@ -30,10 +30,12 @@ export default function Library({ workouts }: { workouts: Workout[] }) {
             Twelve lifts covering every major muscle group.
           </p>
         </div>
-        <SortDropdown value={sortBy} onChange={setSortBy} />
+        <div className="w-full sm:w-auto">
+          <SortDropdown value={sortBy} onChange={setSortBy} />
+        </div>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {sorted.map((workout) => (
           <WorkoutCard key={workout.id} workout={workout} />
         ))}

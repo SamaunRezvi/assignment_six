@@ -7,7 +7,7 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
   return (
     <Link
       href={`/workout/${workout.id}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#14161b] transition-colors hover:border-[var(--accent)]/60"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-[#252830] bg-[#1a1d23] transition-colors hover:border-[var(--accent)]/60"
     >
       <div className="relative h-48 w-full overflow-hidden bg-black/40">
         <Image
@@ -18,7 +18,7 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-      <div className="flex flex-1 flex-col gap-3 p-4">
+      <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex flex-wrap gap-2">
           {workout.muscleGroups.map((tag) => (
             <span
@@ -29,7 +29,7 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
             </span>
           ))}
         </div>
-        <h3 className="font-display text-lg font-semibold uppercase leading-tight">
+        <h3 className="font-display text-xl font-semibold uppercase leading-tight">
           {workout.name}
         </h3>
         <p className="text-sm text-white/50">{workout.equipment}</p>

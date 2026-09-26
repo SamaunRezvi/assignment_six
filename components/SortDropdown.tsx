@@ -14,22 +14,25 @@ export default function SortDropdown({
   onChange: (value: SortOption) => void;
 }) {
   return (
-    <div className="relative inline-block">
-      <select
-        value={value}
-        onChange={(e) => onChange(e.target.value as SortOption)}
-        className="appearance-none rounded-full border border-white/20 bg-white/5 py-2 pl-4 pr-9 text-sm font-medium text-white outline-none focus:border-[var(--accent)]"
-      >
-        {options.map((opt) => (
-          <option key={opt} value={opt} className="bg-[#0b0b0c]">
-            Sort By: {opt}
-          </option>
-        ))}
-      </select>
-      <ChevronDown
-        size={16}
-        className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-white/60"
-      />
-    </div>
+    <label className="flex w-full max-w-xs flex-col gap-1">
+      <span className="text-sm text-white">Sort By</span>
+      <div className="relative">
+        <select
+          value={value}
+          onChange={(e) => onChange(e.target.value as SortOption)}
+          className="h-10 w-full appearance-none rounded-2xl border border-white/20 bg-[#0f1115] pl-3 pr-8 text-sm font-medium text-white outline-none focus:border-[var(--accent)]"
+        >
+          {options.map((opt) => (
+            <option key={opt} value={opt} className="bg-[#0f1115]">
+              {opt}
+            </option>
+          ))}
+        </select>
+        <ChevronDown
+          size={16}
+          className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-white/60"
+        />
+      </div>
+    </label>
   );
 }

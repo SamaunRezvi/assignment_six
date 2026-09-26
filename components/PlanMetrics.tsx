@@ -20,7 +20,7 @@ export default function PlanMetrics({
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-2xl border border-white/10 bg-[#14161b] p-4 sm:p-6"
+          className="rounded-2xl border border-white/10 bg-[#1a1d23] p-4 sm:p-6"
         >
           <p className="text-xs text-white/50 sm:text-sm">{stat.label}</p>
           <p

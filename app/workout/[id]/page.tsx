@@ -24,7 +24,7 @@ export default async function WorkoutDetailPage({
   ];
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-6xl px-4 py-8">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
         <div className="relative h-72 w-full overflow-hidden rounded-3xl border border-white/10 sm:h-96 lg:h-full lg:min-h-[480px]">
           <Image
@@ -54,7 +54,7 @@ export default async function WorkoutDetailPage({
             ))}
           </div>
 
-          <dl className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-[#14161b]">
+          <dl className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-[#1a1d23]">
             {specs.map((spec) => (
               <div
                 key={spec.label}

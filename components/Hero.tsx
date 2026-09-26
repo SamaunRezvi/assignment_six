@@ -3,8 +3,8 @@ import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 items-center gap-10 rounded-3xl border border-white/10 bg-[#1a1d23] p-8 lg:grid-cols-2 lg:p-14">
+    <section className="mx-auto max-w-6xl px-4 py-8">
+      <div className="grid grid-cols-1 items-center gap-10 rounded-2xl border border-white/10 bg-[#1a1d23] p-8 lg:grid-cols-2 lg:p-12">
         <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--accent)]">
             Workout Library
