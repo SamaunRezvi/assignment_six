@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowDown } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -20,6 +21,7 @@ export default function Hero() {
             className="mt-9 inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-8 py-4 text-lg font-semibold text-black transition-transform hover:scale-105"
           >
             Browse Workouts
+            <ArrowDown size={18} />
           </a>
         </div>
         <div className="relative h-72 w-full sm:h-96 lg:h-[28rem]">
