@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import LibrarySection from "./LibrarySection";
 import LibrarySkeleton from "@/components/LibrarySkeleton";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>

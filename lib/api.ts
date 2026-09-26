@@ -12,7 +12,7 @@ async function fetchWithRetry(url: string): Promise<Response> {
   let lastResponse: Response | null = null;
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
-    const res = await fetch(url, { cache: "no-store" });
+    const res = await fetch(url, { next: { revalidate: 60 } });
     if (res.ok) return res;
 
     lastResponse = res;
