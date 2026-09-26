@@ -2,9 +2,7 @@
 
 <div align="center">
 
-<h1>FitLog</h1>
-
-<p><strong>Workout Library</strong></p>
+<img src="./public/readme-hero.svg" alt="FitLog animated 3D workout library hero" width="1120" />
 
 <p>
 	<a href="#getting-started"><img src="https://img.shields.io/badge/Get_Started-CCFF00?style=for-the-badge&logoColor=black" alt="Get started" height="32" /></a>
@@ -18,9 +16,9 @@
 	<a href="#react-questions"><img src="https://img.shields.io/badge/React_Q%26A-CCFF00?style=for-the-badge&logoColor=black" alt="Read the React questions and answers" height="32" /></a>
 </p>
 
-<h2>Train with intent. Log every set.</h2>
+<h2>Great training starts with the right plan.</h2>
 
-<p>Browse focused workouts, build today's plan and keep every session moving.</p>
+<p>Browse focused workouts. Build your plan. Keep every session moving.</p>
 
 <p><sub><strong>CURATED WORKOUTS</strong> &nbsp; · &nbsp; <strong>LIVE PLAN TRACKING</strong> &nbsp; · &nbsp; <strong>INSTANT FEEDBACK</strong></sub></p>
 
