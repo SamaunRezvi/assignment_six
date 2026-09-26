@@ -104,7 +104,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
     setPlan((prev) =>
       prev.map((w) => (w.id === id ? { ...w, done: !w.done } : w))
     );
-    toast.success("Marked as done");
+    toast.success("Workout logged: nice work");
   };
 
   return (
