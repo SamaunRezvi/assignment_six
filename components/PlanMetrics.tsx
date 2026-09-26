@@ -16,15 +16,15 @@ export default function PlanMetrics({
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-3 gap-3 sm:gap-4">
       {stats.map((stat) => (
         <div
           key={stat.label}
           className="rounded-2xl border border-white/10 bg-[#1a1d23] p-4 sm:p-6"
         >
-          <p className="text-xs text-white/50 sm:text-sm">{stat.label}</p>
+          <p className="text-sm text-white/50">{stat.label}</p>
           <p
-            className={`mt-1 font-display text-2xl font-bold sm:text-4xl ${
+            className={`mt-1 font-display text-3xl font-bold sm:text-4xl ${
               stat.accent ? "text-[var(--accent)]" : "text-white"
             }`}
           >
