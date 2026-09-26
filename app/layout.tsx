@@ -35,7 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main className="min-w-0 flex-1">{children}</main>
           <Footer />
           <Toaster
-            position="bottom-center"
+            position="top-right"
             toastOptions={{
               style: {
                 background: "#18181b",
