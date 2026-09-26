@@ -87,12 +87,12 @@
 
   <g transform="translate(64 410)">
     <text fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
-    <text x="33" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">WORKOUTS</text>
-    <path d="M180 0V27M390 0V27M600 0V27" stroke="#34404B"/>
-    <text x="218" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">05</text>
-    <text x="251" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">PLAN CAP</text>
-    <text x="428" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">03</text>
-    <text x="461" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">SORT MODES</text>
+    <text x="34" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="11" letter-spacing="1.5">WORKOUTS</text>
+    <path d="M190 0V27M390 0V27M590 0V27" stroke="#34404B"/>
+    <text x="220" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">05</text>
+    <text x="254" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="11" letter-spacing="1.5">PLAN CAP</text>
+    <text x="430" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">03</text>
+    <text x="464" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="11" letter-spacing="1.5">SORT MODES</text>
     <text x="760" y="5" fill="#C8FF00" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">EXPLORE / SELECT / LOG</text>
   </g>
 </svg>
