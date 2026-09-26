@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, Flame, Star, Check, X } from "lucide-react";
+import { Check, X } from "lucide-react";
 import { Workout } from "@/types/workout";
+import WorkoutStats from "./WorkoutStats";
 
 interface PlanWorkoutCardProps {
   workout: Workout & { done?: boolean };
@@ -31,20 +32,13 @@ export default function PlanWorkoutCard({
           {workout.name}
         </h3>
         <p className="text-sm text-white/50">{workout.equipment}</p>
-        <div className="mt-2 flex items-center gap-4 text-sm text-white/60 sm:text-xs">
-          <span className="flex items-center gap-1">
-            <Clock size={14} className="text-[var(--accent)]" />
-            {workout.duration} min
-          </span>
-          <span className="flex items-center gap-1">
-            <Flame size={14} className="text-[var(--accent)]" />
-            {workout.caloriesBurned} kcal
-          </span>
-          <span className="flex items-center gap-1">
-            <Star size={14} className="text-[var(--accent)]" />
-            {workout.rating}
-          </span>
-        </div>
+        <WorkoutStats
+          duration={workout.duration}
+          caloriesBurned={workout.caloriesBurned}
+          rating={workout.rating}
+          className="mt-2 text-sm text-white/60 sm:text-xs"
+          iconSize={14}
+        />
       </div>
 
       <div className="flex flex-wrap items-center gap-2">

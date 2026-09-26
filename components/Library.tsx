@@ -2,22 +2,17 @@
 
 import { useMemo, useState } from "react";
 import { Workout } from "@/types/workout";
+import { SortOption, sortWorkouts } from "@/lib/sort";
 import WorkoutCard from "./WorkoutCard";
-import SortDropdown, { SortOption } from "./SortDropdown";
-
-const sortKeyMap: Record<SortOption, keyof Workout> = {
-  Duration: "duration",
-  Calories: "caloriesBurned",
-  Rating: "rating",
-};
+import SortDropdown from "./SortDropdown";
 
 export default function Library({ workouts }: { workouts: Workout[] }) {
   const [sortBy, setSortBy] = useState<SortOption>("Duration");
 
-  const sorted = useMemo(() => {
-    const key = sortKeyMap[sortBy];
-    return [...workouts].sort((a, b) => Number(a[key]) - Number(b[key]));
-  }, [workouts, sortBy]);
+  const sorted = useMemo(
+    () => sortWorkouts(workouts, sortBy),
+    [workouts, sortBy]
+  );
 
   return (
     <section id="library" className="mx-auto max-w-6xl px-4 py-8">

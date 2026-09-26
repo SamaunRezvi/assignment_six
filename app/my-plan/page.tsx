@@ -5,16 +5,10 @@ import { usePlan } from "@/context/PlanContext";
 import PlanMetrics from "@/components/PlanMetrics";
 import PlanWorkoutCard from "@/components/PlanWorkoutCard";
 import EmptyPlanState from "@/components/EmptyPlanState";
-import SortDropdown, { SortOption } from "@/components/SortDropdown";
-import { Workout } from "@/types/workout";
+import SortDropdown from "@/components/SortDropdown";
+import { SortOption, sortWorkouts } from "@/lib/sort";
 
 type Tab = "today" | "saved";
-
-const sortKeyMap: Record<SortOption, keyof Workout> = {
-  Duration: "duration",
-  Calories: "caloriesBurned",
-  Rating: "rating",
-};
 
 export default function MyPlanPage() {
   const { plan, saved, removeFromPlan, removeFromSaved, toggleDone, loaded } =
@@ -23,10 +17,10 @@ export default function MyPlanPage() {
   const [sortBy, setSortBy] = useState<SortOption>("Duration");
 
   const activeList = tab === "today" ? plan : saved;
-  const sortedList = useMemo(() => {
-    const key = sortKeyMap[sortBy];
-    return [...activeList].sort((a, b) => Number(a[key]) - Number(b[key]));
-  }, [activeList, sortBy]);
+  const sortedList = useMemo(
+    () => sortWorkouts(activeList, sortBy),
+    [activeList, sortBy]
+  );
 
   const exercises = plan.length;
   const minutes = plan.reduce((sum, w) => sum + w.duration, 0);

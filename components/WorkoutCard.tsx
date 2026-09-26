@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Clock, Flame, Star } from "lucide-react";
 import { Workout } from "@/types/workout";
+import WorkoutStats from "./WorkoutStats";
 
 export default function WorkoutCard({ workout }: { workout: Workout }) {
   return (
@@ -33,20 +33,12 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
           {workout.name}
         </h3>
         <p className="text-sm text-white/50">{workout.equipment}</p>
-        <div className="mt-auto flex items-center gap-4 text-sm text-white/70">
-          <span className="flex items-center gap-1">
-            <Clock size={16} className="text-[var(--accent)]" />
-            {workout.duration} min
-          </span>
-          <span className="flex items-center gap-1">
-            <Flame size={16} className="text-[var(--accent)]" />
-            {workout.caloriesBurned} kcal
-          </span>
-          <span className="flex items-center gap-1">
-            <Star size={16} className="text-[var(--accent)]" />
-            {workout.rating}
-          </span>
-        </div>
+        <WorkoutStats
+          duration={workout.duration}
+          caloriesBurned={workout.caloriesBurned}
+          rating={workout.rating}
+          className="mt-auto text-sm text-white/70"
+        />
       </div>
     </Link>
   );

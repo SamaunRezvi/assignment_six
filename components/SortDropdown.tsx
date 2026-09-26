@@ -1,10 +1,7 @@
 "use client";
 
 import { ChevronDown } from "lucide-react";
-
-export type SortOption = "Duration" | "Calories" | "Rating";
-
-const options: SortOption[] = ["Duration", "Calories", "Rating"];
+import { SortOption, sortOptions } from "@/lib/sort";
 
 export default function SortDropdown({
   value,
@@ -22,7 +19,7 @@ export default function SortDropdown({
           onChange={(e) => onChange(e.target.value as SortOption)}
           className="h-11 w-full appearance-none rounded-2xl border border-white/20 bg-[#0f1115] pl-3 pr-8 text-sm font-medium text-white outline-none focus:border-[var(--accent)] sm:h-10"
         >
-          {options.map((opt) => (
+          {sortOptions.map((opt) => (
             <option key={opt} value={opt} className="bg-[#0f1115]">
               {opt}
             </option>
