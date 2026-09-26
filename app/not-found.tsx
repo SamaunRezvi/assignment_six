@@ -8,7 +8,7 @@ export default function NotFound() {
         <Dumbbell size={56} className="text-[var(--accent)]" strokeWidth={1.5} />
       </div>
       <h1 className="mt-8 font-display text-2xl font-bold uppercase sm:text-3xl">
-        404 — Missed That Lift
+        404: Page Not Found
       </h1>
       <p className="mt-4 text-white/50">
         The page you were looking for isn&apos;t in the library. Head back to
