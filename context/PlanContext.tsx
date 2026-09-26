@@ -70,7 +70,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
       return;
     }
     if (plan.length >= PLAN_CAP) {
-      toast.error("Today's plan is full (max 5 lifts)");
+      toast.error("Today's plan is full - finish these first!");
       return;
     }
     setPlan((prev) => [...prev, workout]);
