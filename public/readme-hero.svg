@@ -34,7 +34,7 @@
   </defs>
 
   <rect x="1" y="1" width="1118" height="428" rx="28" fill="url(#panel)" stroke="#303A45" stroke-width="2"/>
-  <path d="M64 98H1056M64 336H1056" stroke="#28323D"/>
+  <path d="M64 98H1056" stroke="#28323D"/>
   <path d="M580 30V400M640 30V400M700 30V400M760 30V400M820 30V400M880 30V400M940 30V400" stroke="#1A242D" opacity=".55"/>
   <path d="M580 70H1056M580 130H1056M580 190H1056M580 250H1056M580 310H1056" stroke="#1A242D" opacity=".55"/>
 
@@ -54,7 +54,7 @@
     <text y="132" fill="url(#lime)" font-family="Arial, sans-serif" font-size="58" font-weight="800">Log every set.</text>
     <text y="172" fill="#B0BAC5" font-family="Arial, sans-serif" font-size="17">Explore workouts. Build your plan.</text>
     <text y="198" fill="#B0BAC5" font-family="Arial, sans-serif" font-size="17">Keep the week's work moving forward.</text>
-    <g transform="translate(0 226)">
+    <g transform="translate(0 208)">
       <rect width="108" height="30" rx="7" fill="#C8FF00"/>
       <text x="20" y="20" fill="#0D1116" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1">WORKOUTS</text>
       <rect x="120" width="94" height="30" rx="7" fill="#202A32" stroke="#3D4A55"/>
@@ -85,7 +85,7 @@
     <path d="M786 119V77M768 90L786 72L804 90" stroke="#C8FF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <g transform="translate(64 356)">
+  <g transform="translate(64 390)">
     <text fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
     <text x="33" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">WORKOUTS</text>
     <path d="M180 0V27M390 0V27M600 0V27" stroke="#34404B"/>
