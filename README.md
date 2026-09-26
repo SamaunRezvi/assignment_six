@@ -22,7 +22,7 @@ FitLog lets you pick a lift, lock it into today's plan, and watch the week's wor
 3. **Detailed workout pages**: each lift has its own page with a hero image, key specs (equipment, difficulty, sets, reps, duration, calories, rating), and numbered instructions.
 4. **Live plan and saved tracking**: adding or saving a workout updates the navbar badges instantly, shows a toast, and persists to `localStorage` so your plan survives a page reload.
 5. **My Plan dashboard**: live metrics (exercises, minutes, calories), tabbed Today's Plan and Saved views, mark as done and remove actions, and an empty state guiding you back to the library.
-6. **Plan cap enforcement**: Today's Plan is capped at five lifts; the "Add to today's plan" button disables itself once the cap is reached.
+6. **Plan cap enforcement**: Today's Plan is capped at five lifts; trying to add a sixth shows a toast telling you to finish or remove one first.
 7. **Custom 404 page**: any unknown route, or an invalid workout id, lands on a branded not found page.
 
 ## Getting Started
