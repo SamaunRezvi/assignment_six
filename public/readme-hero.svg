@@ -85,13 +85,13 @@
   </g>
 
   <g transform="translate(64 420)">
-    <text fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
-    <text x="30" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">WORKOUTS</text>
+    <text y="0" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
+    <text x="30" y="0" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">WORKOUTS</text>
     <path d="M148 -6V21" stroke="#34404B"/>
-    <text x="172" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">05</text>
-    <text x="204" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">PLAN CAP</text>
+    <text x="172" y="0" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">05</text>
+    <text x="204" y="0" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">PLAN CAP</text>
     <path d="M310 -6V21" stroke="#34404B"/>
-    <text x="334" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">03</text>
-    <text x="366" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">SORT MODES</text>
+    <text x="334" y="0" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">03</text>
+    <text x="366" y="0" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">SORT MODES</text>
   </g>
 </svg>
