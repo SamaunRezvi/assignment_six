@@ -85,7 +85,7 @@
     <path d="M786 119V77M768 90L786 72L804 90" stroke="#C8FF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <g transform="translate(64 390)">
+  <g transform="translate(64 404)">
     <text fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
     <text x="33" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">WORKOUTS</text>
     <path d="M180 0V27M390 0V27M600 0V27" stroke="#34404B"/>
