@@ -84,14 +84,13 @@
     <path d="M786 119V77M768 90L786 72L804 90" stroke="#C8FF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <g transform="translate(64 395)">
-    <path d="M190 0V27M390 0V27M590 0V27" stroke="#34404B"/>
-    <text x="95" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
-    <text x="95" y="18" text-anchor="middle" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">WORKOUTS</text>
-    <text x="290" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">05</text>
-    <text x="290" y="18" text-anchor="middle" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">PLAN CAP</text>
-    <text x="490" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">03</text>
-    <text x="490" y="18" text-anchor="middle" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">SORT MODES</text>
-    <text x="760" y="5" fill="#C8FF00" font-family="Arial, sans-serif" font-size="10" letter-spacing="2">EXPLORE / SELECT / LOG</text>
+  <g transform="translate(500 395)">
+    <path d="M170 0V27M360 0V27" stroke="#34404B"/>
+    <text fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
+    <text x="34" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">WORKOUTS</text>
+    <text x="200" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">05</text>
+    <text x="234" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">PLAN CAP</text>
+    <text x="390" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">03</text>
+    <text x="424" y="5" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">SORT MODES</text>
   </g>
 </svg>
