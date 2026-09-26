@@ -16,11 +16,11 @@ export default function PlanMetrics({
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-3 sm:gap-4">
+    <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-2xl border border-white/10 bg-[#1a1d23] p-4 sm:p-6"
+          className="rounded-2xl border border-white/10 bg-[#1a1d23] p-5 sm:p-6"
         >
           <p className="text-sm text-white/50">{stat.label}</p>
           <p
