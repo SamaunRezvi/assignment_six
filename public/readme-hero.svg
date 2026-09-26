@@ -1,6 +1,6 @@
-<svg width="1120" height="470" viewBox="0 0 1120 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1120" height="400" viewBox="0 0 1120 400" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="panel" x1="70" y1="30" x2="1050" y2="410" gradientUnits="userSpaceOnUse">
+    <linearGradient id="panel" x1="70" y1="30" x2="1050" y2="350" gradientUnits="userSpaceOnUse">
       <stop stop-color="#151A20"/>
       <stop offset="1" stop-color="#0D1116"/>
     </linearGradient>
@@ -33,9 +33,9 @@
     </style>
   </defs>
 
-  <rect x="1" y="1" width="1118" height="468" rx="28" fill="url(#panel)" stroke="#303A45" stroke-width="2"/>
+  <rect x="1" y="1" width="1118" height="398" rx="28" fill="url(#panel)" stroke="#303A45" stroke-width="2"/>
   <path d="M64 98H1056" stroke="#28323D"/>
-  <path d="M580 30V400M640 30V400M700 30V400M760 30V400M820 30V400M880 30V400M940 30V400" stroke="#1A242D" opacity=".55"/>
+  <path d="M580 30V370M640 30V370M700 30V370M760 30V370M820 30V370M880 30V370M940 30V370" stroke="#1A242D" opacity=".55"/>
   <path d="M580 70H1056M580 130H1056M580 190H1056M580 250H1056M580 310H1056" stroke="#1A242D" opacity=".55"/>
 
   <g transform="translate(64 48)">
@@ -84,14 +84,4 @@
     <path d="M786 119V77M768 90L786 72L804 90" stroke="#C8FF00" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <g transform="translate(64 420)">
-    <text y="0" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">12</text>
-    <text x="30" y="0" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">WORKOUTS</text>
-    <path d="M148 -6V21" stroke="#34404B"/>
-    <text x="172" y="0" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">05</text>
-    <text x="204" y="0" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">PLAN CAP</text>
-    <path d="M310 -6V21" stroke="#34404B"/>
-    <text x="334" y="0" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">03</text>
-    <text x="366" y="0" fill="#8B98A5" font-family="Arial, sans-serif" font-size="10" letter-spacing="1.5">SORT MODES</text>
-  </g>
 </svg>
