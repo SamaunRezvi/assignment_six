@@ -4,6 +4,8 @@
 
 <img src="./public/readme-hero.svg" alt="FitLog animated 3D workout library hero" width="1120" />
 
+<br />
+
 <p>
 	<a href="#getting-started"><img src="https://img.shields.io/badge/Get_Started-CCFF00?style=for-the-badge&logoColor=black" alt="Get started" height="32" /></a>
 	&nbsp;
