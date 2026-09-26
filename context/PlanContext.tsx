@@ -70,7 +70,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
 
   const addToPlan = (workout: Workout) => {
     if (isInPlan(workout.id)) {
-      toast("Already in today's plan");
+      toast.error("Already in your plan");
       return;
     }
     if (plan.length >= PLAN_CAP) {
@@ -83,7 +83,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
 
   const addToSaved = (workout: Workout) => {
     if (isInSaved(workout.id)) {
-      toast("Already saved");
+      toast.error("Already in your saved list");
       return;
     }
     setSaved((prev) => [...prev, workout]);
