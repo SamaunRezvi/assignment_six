@@ -92,12 +92,12 @@ export function PlanProvider({ children }: { children: ReactNode }) {
 
   const removeFromPlan = (id: number) => {
     setPlan((prev) => prev.filter((w) => w.id !== id));
-    toast("Removed from today's plan");
+    toast.success("Removed from today's plan");
   };
 
   const removeFromSaved = (id: number) => {
     setSaved((prev) => prev.filter((w) => w.id !== id));
-    toast("Removed from saved");
+    toast.success("Removed from saved");
   };
 
   const toggleDone = (id: number) => {
