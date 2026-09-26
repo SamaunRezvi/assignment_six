@@ -7,9 +7,9 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
   return (
     <Link
       href={`/workout/${workout.id}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-[#252830] bg-[#1a1d23] transition-colors hover:border-[var(--accent)]/60"
+      className="group flex flex-col overflow-hidden rounded-3xl border border-[#252830] bg-[#1a1d23] transition-colors hover:border-[var(--accent)]/60"
     >
-      <div className="relative h-48 w-full overflow-hidden bg-black/40">
+      <div className="relative h-56 w-full overflow-hidden bg-black/40 sm:h-60">
         <Image
           src={workout.image}
           alt={workout.name}
@@ -18,12 +18,12 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-      <div className="flex flex-1 flex-col gap-3 p-5">
+      <div className="flex flex-1 flex-col gap-4 p-6">
         <div className="flex flex-wrap gap-2">
           {workout.muscleGroups.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-[var(--accent)] px-2.5 py-0.5 text-xs font-semibold text-black"
+              className="rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-semibold text-black"
             >
               {tag}
             </span>

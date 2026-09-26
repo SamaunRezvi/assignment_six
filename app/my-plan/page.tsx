@@ -11,7 +11,7 @@ import { SortOption, sortWorkouts } from "@/lib/sort";
 type Tab = "today" | "saved";
 
 export default function MyPlanPage() {
-  const { plan, saved, removeFromPlan, removeFromSaved, toggleDone, loaded } =
+  const { plan, saved, removeFromPlan, removeFromSaved, markDone, loaded } =
     usePlan();
   const [tab, setTab] = useState<Tab>("today");
   const [sortBy, setSortBy] = useState<SortOption>("Duration");
@@ -27,17 +27,17 @@ export default function MyPlanPage() {
   const calories = plan.reduce((sum, w) => sum + w.caloriesBurned, 0);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
-      <h1 className="font-display text-4xl font-bold uppercase">My Plan</h1>
-      <p className="mt-2 text-white/50">
+    <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 lg:py-12">
+      <h1 className="font-display text-5xl font-bold uppercase">My Plan</h1>
+      <p className="mt-3 text-lg text-white/50">
         Cap of five lifts for today. Finish them, then load more.
       </p>
 
-      <div className="mt-8">
+      <div className="mt-10">
         <PlanMetrics exercises={exercises} minutes={minutes} calories={calories} />
       </div>
 
-      <div className="mt-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+      <div className="mt-10 flex flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
         <div className="flex gap-1 rounded-2xl border border-white/10 bg-[#1a1d23] p-1">
           <TabButton active={tab === "today"} onClick={() => setTab("today")}>
             Today&apos;s Plan
@@ -51,7 +51,7 @@ export default function MyPlanPage() {
         </div>
       </div>
 
-      <div className="mt-8 space-y-4">
+      <div className="mt-10 space-y-5">
         {!loaded ? (
           <p className="py-10 text-center text-white/50">Loading workouts…</p>
         ) : sortedList.length === 0 ? (
@@ -67,7 +67,7 @@ export default function MyPlanPage() {
                   : removeFromSaved(workout.id)
               }
               onMarkDone={
-                tab === "today" ? () => toggleDone(workout.id) : undefined
+                tab === "today" ? () => markDone(workout.id) : undefined
               }
             />
           ))
@@ -89,7 +89,7 @@ function TabButton({
   return (
     <button
       onClick={onClick}
-      className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+      className={`rounded-full px-5 py-2.5 text-base font-semibold transition-colors ${
         active
           ? "bg-white/10 text-[var(--accent)]"
           : "text-white/50 hover:text-white/80"

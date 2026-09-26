@@ -20,11 +20,11 @@ export default function PlanMetrics({
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-2xl border border-white/10 bg-[#1a1d23] p-5 sm:p-6"
+          className="rounded-3xl border border-white/10 bg-[#1a1d23] p-6 sm:p-7"
         >
-          <p className="text-sm text-white/50">{stat.label}</p>
+          <p className="text-base text-white/50">{stat.label}</p>
           <p
-            className={`mt-1 font-display text-3xl font-bold sm:text-4xl ${
+            className={`mt-2 font-display text-4xl font-bold sm:text-5xl ${
               stat.accent ? "text-[var(--accent)]" : "text-white"
             }`}
           >

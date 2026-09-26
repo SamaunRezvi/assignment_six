@@ -24,8 +24,8 @@ export default async function WorkoutDetailPage({
   ];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8">
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+    <div className="mx-auto max-w-7xl px-5 py-10 sm:px-6 lg:py-12">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div className="relative h-72 w-full overflow-hidden rounded-3xl border border-white/10 sm:h-96 lg:h-full lg:min-h-[480px]">
           <Image
             src={workout.image}
@@ -38,16 +38,16 @@ export default async function WorkoutDetailPage({
         </div>
 
         <div>
-          <h1 className="font-display text-3xl font-bold uppercase sm:text-4xl">
+          <h1 className="font-display text-4xl font-bold uppercase sm:text-5xl">
             {workout.name}
           </h1>
-          <p className="mt-4 text-white/60">{workout.description}</p>
+          <p className="mt-5 text-lg leading-8 text-white/60">{workout.description}</p>
 
           <div className="mt-4 flex flex-wrap gap-2">
             {workout.muscleGroups.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-semibold text-black"
+                className="rounded-full bg-[var(--accent)] px-4 py-2 text-base font-semibold text-black"
               >
                 {tag}
               </span>
@@ -58,9 +58,9 @@ export default async function WorkoutDetailPage({
             {specs.map((spec) => (
               <div
                 key={spec.label}
-                className="flex items-center justify-between border-b border-white/10 px-6 py-3 last:border-b-0"
+                className="flex items-center justify-between border-b border-white/10 px-7 py-4 last:border-b-0"
               >
-                <dt className="text-xs font-bold uppercase tracking-wide text-white/50">
+                <dt className="text-base font-bold uppercase tracking-wide text-white/50">
                   {spec.label}
                 </dt>
                 <dd className="font-medium text-white">{spec.value}</dd>
@@ -69,12 +69,12 @@ export default async function WorkoutDetailPage({
           </dl>
 
           <div className="mt-8">
-            <h2 className="font-display text-xl font-bold uppercase text-[var(--accent)]">
+            <h2 className="font-display text-2xl font-bold uppercase text-[var(--accent)]">
               Instructions
             </h2>
-            <ol className="mt-4 space-y-2">
+            <ol className="mt-5 space-y-3">
               {workout.instructions.map((step, index) => (
-                <li key={index} className="text-white/70">
+                <li key={index} className="text-base leading-7 text-white/70">
                   {index + 1}. {step}
                 </li>
               ))}

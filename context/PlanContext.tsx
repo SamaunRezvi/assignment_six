@@ -10,18 +10,14 @@ import {
 import toast from "react-hot-toast";
 import { Workout } from "@/types/workout";
 
-interface PlanItem extends Workout {
-  done?: boolean;
-}
-
 interface PlanContextValue {
-  plan: PlanItem[];
-  saved: PlanItem[];
+  plan: Workout[];
+  saved: Workout[];
   addToPlan: (workout: Workout) => void;
   addToSaved: (workout: Workout) => void;
   removeFromPlan: (id: number) => void;
   removeFromSaved: (id: number) => void;
-  toggleDone: (id: number) => void;
+  markDone: (id: number) => void;
   isInPlan: (id: number) => boolean;
   isInSaved: (id: number) => boolean;
   isPlanFull: boolean;
@@ -35,7 +31,7 @@ const PlanContext = createContext<PlanContextValue | undefined>(undefined);
 const PLAN_KEY = "fitlog-plan";
 const SAVED_KEY = "fitlog-saved";
 
-function readStorage(key: string): PlanItem[] {
+function readStorage(key: string): Workout[] {
   if (typeof window === "undefined") return [];
   try {
     const raw = localStorage.getItem(key);
@@ -46,8 +42,8 @@ function readStorage(key: string): PlanItem[] {
 }
 
 export function PlanProvider({ children }: { children: ReactNode }) {
-  const [plan, setPlan] = useState<PlanItem[]>([]);
-  const [saved, setSaved] = useState<PlanItem[]>([]);
+  const [plan, setPlan] = useState<Workout[]>([]);
+  const [saved, setSaved] = useState<Workout[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -77,7 +73,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
       toast.error("Today's plan is full (max 5 lifts)");
       return;
     }
-    setPlan((prev) => [...prev, { ...workout, done: false }]);
+    setPlan((prev) => [...prev, workout]);
     toast.success("Added to today's plan");
   };
 
@@ -100,10 +96,8 @@ export function PlanProvider({ children }: { children: ReactNode }) {
     toast.success("Removed from saved");
   };
 
-  const toggleDone = (id: number) => {
-    setPlan((prev) =>
-      prev.map((w) => (w.id === id ? { ...w, done: !w.done } : w))
-    );
+  const markDone = (id: number) => {
+    setPlan((prev) => prev.filter((w) => w.id !== id));
     toast.success("Workout logged: nice work");
   };
 
@@ -116,7 +110,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
         addToSaved,
         removeFromPlan,
         removeFromSaved,
-        toggleDone,
+        markDone,
         isInPlan,
         isInSaved,
         isPlanFull: plan.length >= PLAN_CAP,

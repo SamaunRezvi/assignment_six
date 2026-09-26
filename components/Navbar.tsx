@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0f1115]/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-6">
         <div className="flex items-center gap-3">
           <button
             onClick={() => setOpen((prev) => !prev)}
@@ -29,8 +29,8 @@ export default function Navbar() {
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.png" alt="FitLog logo" width={24} height={24} />
-            <span className="font-display text-lg font-semibold tracking-wide">
+            <Image src="/logo.png" alt="FitLog logo" width={28} height={28} />
+            <span className="font-display text-xl font-semibold tracking-wide">
               FITLOG
             </span>
           </Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+                className={`rounded-full px-5 py-2 text-base font-medium transition-colors ${
                   isActive
                     ? "bg-[var(--accent)] text-black"
                     : "text-white/70 hover:text-white"
@@ -55,16 +55,16 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-4 text-sm font-semibold">
+        <div className="flex items-center gap-5 text-base font-semibold">
           <Link href="/my-plan" className="flex items-center gap-2">
             Plan
-            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-[var(--accent)] px-1.5 text-xs text-black">
+            <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-[var(--accent)] px-2 text-sm text-black">
               {plan.length}
             </span>
           </Link>
           <Link href="/my-plan" className="flex items-center gap-2">
             Saved
-            <span className="flex h-5 min-w-5 items-center justify-center rounded-full border border-white/30 px-1.5 text-xs text-white">
+            <span className="flex h-6 min-w-6 items-center justify-center rounded-full border border-white/30 px-2 text-sm text-white">
               {saved.length}
             </span>
           </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`rounded-2xl px-4 py-2 text-sm font-medium transition-colors ${
+                className={`rounded-2xl px-5 py-3 text-base font-medium transition-colors ${
                   isActive
                     ? "bg-[var(--accent)] text-black"
                     : "text-white/70 hover:text-white"

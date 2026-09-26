@@ -12,11 +12,11 @@ export default function WorkoutStats({
   duration,
   caloriesBurned,
   rating,
-  className = "text-sm text-white/70",
+  className = "text-base text-white/70",
   iconSize = 16,
 }: WorkoutStatsProps) {
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
+    <div className={`flex items-center gap-5 ${className}`}>
       <span className="flex items-center gap-1">
         <Clock size={iconSize} className="text-[var(--accent)]" />
         {duration} min
