@@ -38,13 +38,8 @@ export async function getWorkouts(): Promise<Workout[]> {
 
 export async function getWorkoutById(id: string): Promise<Workout | null> {
   const res = await fetchWithRetry(`${API_BASE}/${id}`);
-  if (res.status === 404) {
-    return null;
-  }
   if (!res.ok) {
-    throw new Error(
-      `Failed to fetch workout ${id} (status ${res.status}: ${res.statusText})`
-    );
+    return null;
   }
   return res.json();
 }
