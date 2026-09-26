@@ -17,7 +17,7 @@ export default function PlanWorkoutCard({
   onMarkDone,
 }: PlanWorkoutCardProps) {
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 sm:flex-row sm:items-center">
+    <div className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-[#14161b] p-4 sm:flex-row sm:items-center">
       <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl">
         <Image src={workout.image} alt={workout.name} fill sizes="80px" className="object-cover" />
       </div>
@@ -50,7 +50,7 @@ export default function PlanWorkoutCard({
       <div className="flex items-center gap-2">
         <Link
           href={`/workout/${workout.id}`}
-          className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold uppercase text-white/80 hover:border-white"
+          className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-white/80 hover:border-white"
         >
           View Details
         </Link>

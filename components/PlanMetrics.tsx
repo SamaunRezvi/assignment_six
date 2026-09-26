@@ -10,9 +10,9 @@ export default function PlanMetrics({
   calories,
 }: PlanMetricsProps) {
   const stats = [
-    { label: "Exercises", value: exercises },
-    { label: "Minutes", value: minutes },
-    { label: "Calories", value: calories },
+    { label: "Exercises", value: exercises, accent: true },
+    { label: "Minutes", value: minutes, accent: false },
+    { label: "Calories", value: calories, accent: false },
   ];
 
   return (
@@ -20,13 +20,15 @@ export default function PlanMetrics({
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center sm:p-6"
+          className="rounded-2xl border border-white/10 bg-[#14161b] p-4 sm:p-6"
         >
-          <p className="font-display text-2xl font-bold text-[var(--accent)] sm:text-4xl">
+          <p className="text-xs text-white/50 sm:text-sm">{stat.label}</p>
+          <p
+            className={`mt-1 font-display text-2xl font-bold sm:text-4xl ${
+              stat.accent ? "text-[var(--accent)]" : "text-white"
+            }`}
+          >
             {stat.value}
-          </p>
-          <p className="mt-1 text-xs uppercase tracking-wide text-white/50 sm:text-sm">
-            {stat.label}
           </p>
         </div>
       ))}

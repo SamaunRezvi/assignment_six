@@ -7,9 +7,9 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
   return (
     <Link
       href={`/workout/${workout.id}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-colors hover:border-[var(--accent)]/60"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#14161b] transition-colors hover:border-[var(--accent)]/60"
     >
-      <div className="relative h-44 w-full overflow-hidden bg-black/40">
+      <div className="relative h-48 w-full overflow-hidden bg-black/40">
         <Image
           src={workout.image}
           alt={workout.name}
@@ -23,7 +23,7 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
           {workout.muscleGroups.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white/70"
+              className="rounded-full bg-[var(--accent)] px-2.5 py-0.5 text-xs font-semibold text-black"
             >
               {tag}
             </span>

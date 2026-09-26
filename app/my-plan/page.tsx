@@ -1,19 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { usePlan } from "@/context/PlanContext";
 import PlanMetrics from "@/components/PlanMetrics";
 import PlanWorkoutCard from "@/components/PlanWorkoutCard";
 import EmptyPlanState from "@/components/EmptyPlanState";
+import SortDropdown, { SortOption } from "@/components/SortDropdown";
+import { Workout } from "@/types/workout";
 
 type Tab = "today" | "saved";
+
+const sortKeyMap: Record<SortOption, keyof Workout> = {
+  Duration: "duration",
+  Calories: "caloriesBurned",
+  Rating: "rating",
+};
 
 export default function MyPlanPage() {
   const { plan, saved, removeFromPlan, removeFromSaved, toggleDone, loaded } =
     usePlan();
   const [tab, setTab] = useState<Tab>("today");
+  const [sortBy, setSortBy] = useState<SortOption>("Duration");
 
   const activeList = tab === "today" ? plan : saved;
+  const sortedList = useMemo(() => {
+    const key = sortKeyMap[sortBy];
+    return [...activeList].sort((a, b) => Number(a[key]) - Number(b[key]));
+  }, [activeList, sortBy]);
 
   const exercises = plan.length;
   const minutes = plan.reduce((sum, w) => sum + w.duration, 0);
@@ -32,22 +45,25 @@ export default function MyPlanPage() {
         <PlanMetrics exercises={exercises} minutes={minutes} calories={calories} />
       </div>
 
-      <div className="mt-10 flex gap-2 border-b border-white/10">
-        <TabButton active={tab === "today"} onClick={() => setTab("today")}>
-          Today&apos;s Plan
-        </TabButton>
-        <TabButton active={tab === "saved"} onClick={() => setTab("saved")}>
-          Saved
-        </TabButton>
+      <div className="mt-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
+        <div className="flex gap-1 rounded-full border border-white/10 bg-[#14161b] p-1">
+          <TabButton active={tab === "today"} onClick={() => setTab("today")}>
+            Today&apos;s Plan
+          </TabButton>
+          <TabButton active={tab === "saved"} onClick={() => setTab("saved")}>
+            Saved
+          </TabButton>
+        </div>
+        <SortDropdown value={sortBy} onChange={setSortBy} />
       </div>
 
-      <div className="mt-8 space-y-4">
+      <div className="mt-6 space-y-4">
         {!loaded ? (
           <p className="py-10 text-center text-white/50">Loading workouts…</p>
-        ) : activeList.length === 0 ? (
+        ) : sortedList.length === 0 ? (
           <EmptyPlanState />
         ) : (
-          activeList.map((workout) => (
+          sortedList.map((workout) => (
             <PlanWorkoutCard
               key={workout.id}
               workout={workout}
@@ -79,10 +95,10 @@ function TabButton({
   return (
     <button
       onClick={onClick}
-      className={`border-b-2 px-4 py-3 text-sm font-semibold uppercase tracking-wide transition-colors ${
+      className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
         active
-          ? "border-[var(--accent)] text-white"
-          : "border-transparent text-white/40 hover:text-white/70"
+          ? "bg-white/10 text-[var(--accent)]"
+          : "text-white/50 hover:text-white/80"
       }`}
     >
       {children}

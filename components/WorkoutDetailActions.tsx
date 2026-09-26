@@ -17,16 +17,16 @@ export default function WorkoutDetailActions({
       <button
         onClick={() => addToPlan(workout)}
         disabled={planFull}
-        className="flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+        className="flex items-center gap-2 rounded-full bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-black transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
       >
-        <Plus size={18} />
+        <Plus size={16} />
         Add to today&apos;s plan
       </button>
       <button
         onClick={() => addToSaved(workout)}
-        className="flex items-center gap-2 rounded-full border border-white/30 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-colors hover:border-white"
+        className="flex items-center gap-2 rounded-full border border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white"
       >
-        <Bookmark size={18} />
+        <Bookmark size={16} />
         Save for later
       </button>
     </div>
