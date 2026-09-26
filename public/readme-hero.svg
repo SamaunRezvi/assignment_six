@@ -1,4 +1,4 @@
-<svg width="1120" height="430" viewBox="0 0 1120 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1120" height="470" viewBox="0 0 1120 470" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="panel" x1="70" y1="30" x2="1050" y2="410" gradientUnits="userSpaceOnUse">
       <stop stop-color="#151A20"/>
@@ -33,7 +33,7 @@
     </style>
   </defs>
 
-  <rect x="1" y="1" width="1118" height="428" rx="28" fill="url(#panel)" stroke="#303A45" stroke-width="2"/>
+  <rect x="1" y="1" width="1118" height="468" rx="28" fill="url(#panel)" stroke="#303A45" stroke-width="2"/>
   <path d="M64 98H1056" stroke="#28323D"/>
   <path d="M580 30V400M640 30V400M700 30V400M760 30V400M820 30V400M880 30V400M940 30V400" stroke="#1A242D" opacity=".55"/>
   <path d="M580 70H1056M580 130H1056M580 190H1056M580 250H1056M580 310H1056" stroke="#1A242D" opacity=".55"/>
