@@ -47,7 +47,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time hydration from localStorage after mount, required to avoid SSR/client mismatch
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setPlan(readStorage(PLAN_KEY));
     setSaved(readStorage(SAVED_KEY));
     setLoaded(true);
@@ -98,7 +98,7 @@ export function PlanProvider({ children }: { children: ReactNode }) {
 
   const markDone = (id: number) => {
     setPlan((prev) => prev.filter((w) => w.id !== id));
-    toast.success("Workout logged: nice work");
+    toast.success("Workout logged - nice work");
   };
 
   return (
