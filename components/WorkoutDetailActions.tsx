@@ -9,15 +9,13 @@ export default function WorkoutDetailActions({
 }: {
   workout: Workout;
 }) {
-  const { addToPlan, addToSaved, isInPlan, isPlanFull } = usePlan();
-  const planFull = isPlanFull && !isInPlan(workout.id);
+  const { addToPlan, addToSaved } = usePlan();
 
   return (
     <div className="mt-8 flex flex-wrap gap-4">
       <button
         onClick={() => addToPlan(workout)}
-        disabled={planFull}
-        className="flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 text-base font-semibold text-black transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+        className="flex items-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3.5 text-base font-semibold text-black transition-transform hover:scale-105"
       >
         <Plus size={16} />
         Add to today&apos;s plan
