@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="./public/readme-hero.svg" alt="FitLog animated 3D workout library hero" width="1120" />
+<img src="./public/readme-hero.svg?v=3" alt="FitLog animated 3D workout library hero" width="1120" />
 
 <br />
 
